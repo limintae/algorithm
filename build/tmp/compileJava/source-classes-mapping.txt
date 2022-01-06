@@ -2,20 +2,24 @@ kakao/Test3.java
  kakao.Test3
 programmers/binary/Immigration.java
  programmers.binary.Immigration
-Fibonacci.java
- Fibonacci
-programmers/dfs/TargetNumber.java
- programmers.dfs.TargetNumber
 programmers/SortSolution.java
  programmers.SortSolution
  programmers.SortSolution$Solution
  programmers.SortSolution$Solution$1
+Fibonacci.java
+ Fibonacci
+programmers/dfs/TargetNumber.java
+ programmers.dfs.TargetNumber
+kakao/Test2.java
+ kakao.Test2
+kakao/Test4.java
+ kakao.Test4
 programmers/queue/Truck.java
  programmers.queue.Truck
 programmers/Runners.java
  programmers.Runners
  programmers.Runners$Solution
-kakao/Test1.java
- kakao.Test1
-kakao/Test2.java
- kakao.Test2
+programmers/greedy/GymSuit.java
+ programmers.greedy.GymSuit
+kakao/GiftCard.java
+ kakao.GiftCard

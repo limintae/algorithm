@@ -8,7 +8,7 @@ public class SortSolution {
     public static void main(String arg[]) {
 
         Solution s = new Solution();
-        String answer = s.solution2(new int[] {9111, 912, 913, 9});
+        String answer = s.solution2(new int[]{9111, 912, 913, 9});
         System.out.println(answer);
 
     }

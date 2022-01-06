@@ -7,7 +7,7 @@ public class Truck {
 
     public static void main(String arg[]) {
 
-        solution(2, 10, new int[] {7,4,5,6});
+        solution(2, 10, new int[]{7, 4, 5, 6});
 
     }
 

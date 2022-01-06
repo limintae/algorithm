@@ -6,7 +6,7 @@ import java.util.Collections;
 public class Immigration {
 
     public static void main(String[] arg) {
-        solution(6, new int[] {7,10});
+        solution(6, new int[]{7, 10});
     }
 
     public static long solution(int n, int[] times) {
