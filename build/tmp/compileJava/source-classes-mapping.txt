@@ -19,7 +19,7 @@ programmers/queue/Truck.java
 programmers/Runners.java
  programmers.Runners
  programmers.Runners$Solution
-programmers/greedy/GymSuit.java
- programmers.greedy.GymSuit
 kakao/GiftCard.java
  kakao.GiftCard
+programmers/greedy/GymSuit.java
+ programmers.greedy.GymSuit
