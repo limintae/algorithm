@@ -8,8 +8,8 @@ programmers/SortSolution.java
  programmers.SortSolution$Solution$1
 Fibonacci.java
  Fibonacci
-programmers/dfs/TargetNumber.java
- programmers.dfs.TargetNumber
+programmers/greedy/GymSuit.java
+ programmers.greedy.GymSuit
 kakao/Test2.java
  kakao.Test2
 kakao/Test4.java
@@ -21,7 +21,9 @@ programmers/Runners.java
  programmers.Runners$Solution
 kakao/GiftCard.java
  kakao.GiftCard
-programmers/greedy/GymSuit.java
- programmers.greedy.GymSuit
 programmers/dfs/WordConvert.java
  programmers.dfs.WordConvert
+programmers/dfs/TargetNumber.java
+ programmers.dfs.TargetNumber
+programmers/graph/FarthestNode.java
+ programmers.graph.FarthestNode
