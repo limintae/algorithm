@@ -5,35 +5,36 @@ import java.util.Queue;
 
 public class FarthestNode {
 
-    // 아직 이해못함!!
     public int solution(int n, int[][] edge) {
         return this.bfs(n, edge);
     }
 
     public int bfs(int n, int[][] edge){
-        boolean[] check = new boolean[n];
-        boolean[][] connect = new boolean[n][n];
-        Queue<Integer> q = new LinkedList<>();
-        for (int i = 0; i < edge.length; i++) {
-            connect[edge[i][0] - 1][edge[i][1] - 1] = true;
-            connect[edge[i][1] - 1][edge[i][0] - 1] = true;
+        boolean[] visitedNode = new boolean[n];
+        boolean[][] connectedEdgeMap = new boolean[n][n];
+        Queue<Integer> nodeQueue = new LinkedList<>();
+
+        for (int[] ints : edge) {
+            connectedEdgeMap[ints[0] - 1][ints[1] - 1] = true;
+            connectedEdgeMap[ints[1] - 1][ints[0] - 1] = true;
         }
-        check[0] = true;
-        q.add(0);
+
+        visitedNode[0] = true;
+        nodeQueue.add(0);
 
         int answer = 0;
-        while(!q.isEmpty()){
-            int qSize = q.size();
-            for (int i = 0; i < qSize; i++) {
-                int node = q.poll();
+        while(!nodeQueue.isEmpty()) {
+            int willVisitNodeCount = nodeQueue.size();
+            for (int i = 0; i < willVisitNodeCount; i++) {
+                int node = nodeQueue.poll();
                 for (int j = 0; j < n; j++) {
-                    if (connect[j][node] && !check[j]){
-                        check[j]=true;
-                        q.add(j);
+                    if (connectedEdgeMap[j][node] && !visitedNode[j]){
+                        visitedNode[j]=true;
+                        nodeQueue.add(j);
                     }
                 }
             }
-            answer = qSize;
+            answer = willVisitNodeCount;
         }
         return answer;
     }
