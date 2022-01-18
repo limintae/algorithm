@@ -1,15 +1,8 @@
 package programmers.binary;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class Immigration {
 
-    public static void main(String[] arg) {
-        solution(6, new int[]{7, 10});
-    }
-
-    public static long solution(int n, int[] times) {
+    public long solution(int n, int[] times) {
         long answer = 0;
         long start = 0;
         long end = 0;

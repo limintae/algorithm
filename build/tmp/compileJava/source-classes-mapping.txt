@@ -1,7 +1,7 @@
 kakao/Test3.java
  kakao.Test3
-programmers/binary/Immigration.java
- programmers.binary.Immigration
+programmers/dfs/TargetNumber.java
+ programmers.dfs.TargetNumber
 programmers/SortSolution.java
  programmers.SortSolution
  programmers.SortSolution$Solution
@@ -23,7 +23,7 @@ kakao/GiftCard.java
  kakao.GiftCard
 programmers/dfs/WordConvert.java
  programmers.dfs.WordConvert
-programmers/dfs/TargetNumber.java
- programmers.dfs.TargetNumber
+programmers/binary/Immigration.java
+ programmers.binary.Immigration
 programmers/graph/FarthestNode.java
  programmers.graph.FarthestNode

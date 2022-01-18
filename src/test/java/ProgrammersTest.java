@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import programmers.binary.Bridge;
+import programmers.binary.Immigration;
 import programmers.dfs.TargetNumber;
 import programmers.dfs.WordConvert;
 import programmers.graph.FarthestNode;
@@ -37,6 +39,18 @@ public class ProgrammersTest {
     void farthestNode() {
         int[][] edge = {{3, 6}, {4, 3}, {3, 2}, {1, 3}, {1, 2}, {2, 4}, {5, 2}};
         assertThat(new FarthestNode().solution(6, edge)).isEqualTo(3);
+    }
+
+    @Test
+    @DisplayName("[이분탐색] 입국심사")
+    void immigration() {
+        assertThat(new Immigration().solution(6, new int[]{7, 10})).isEqualTo(28);
+    }
+
+    @Test
+    @DisplayName("[이분탐색] 징검다리")
+    void bridge() {
+        assertThat(new Bridge().solution(25, new int[] {2, 14, 11, 21, 17}, 2)).isEqualTo(4);
     }
 
 }
