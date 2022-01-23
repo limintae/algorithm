@@ -1,3 +1,4 @@
+import kakao.Report;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import programmers.binary.Bridge;
@@ -51,6 +52,21 @@ public class ProgrammersTest {
     @DisplayName("[이분탐색] 징검다리")
     void bridge() {
         assertThat(new Bridge().solution(25, new int[] {2, 14, 11, 21, 17}, 2)).isEqualTo(4);
+    }
+
+    @Test
+    @DisplayName("[2022 KAKAO BLIND] 신고 결과 받기")
+    void report() {
+        assertThat(new Report().solution(
+                new String[] {"muzi", "frodo", "apeach", "neo"},
+                new String[] {"muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi"},
+                2
+        )).isEqualTo(new int[] {2, 1, 1, 0});
+        assertThat(new Report().solution(
+                new String[] {"con", "ryan"},
+                new String[] {"ryan con", "ryan con", "ryan con", "ryan con"},
+                3
+        )).isEqualTo(new int[] {0,0});
     }
 
 }

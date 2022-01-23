@@ -27,3 +27,9 @@ programmers/binary/Immigration.java
  programmers.binary.Immigration
 programmers/graph/FarthestNode.java
  programmers.graph.FarthestNode
+programmers/binary/Bridge.java
+ programmers.binary.Bridge
+kakao/Compact.java
+ kakao.Compact
+kakao/Report.java
+ kakao.Report
