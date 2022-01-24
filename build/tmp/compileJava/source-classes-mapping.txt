@@ -29,7 +29,7 @@ programmers/graph/FarthestNode.java
  programmers.graph.FarthestNode
 programmers/binary/Bridge.java
  programmers.binary.Bridge
-kakao/Compact.java
- kakao.Compact
 kakao/Report.java
  kakao.Report
+kakao/Compact.java
+ kakao.Compact

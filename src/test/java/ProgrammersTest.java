@@ -1,3 +1,4 @@
+import kakao.Compact;
 import kakao.Report;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -67,6 +68,12 @@ public class ProgrammersTest {
                 new String[] {"ryan con", "ryan con", "ryan con", "ryan con"},
                 3
         )).isEqualTo(new int[] {0,0});
+    }
+
+    @Test
+    @DisplayName("[2020 KAKAO BLIND] 문자열 압축")
+    void compact() {
+        assertThat(new Compact().solution2("ababccc")).isEqualTo(7);
     }
 
 }
