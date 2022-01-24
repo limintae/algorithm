@@ -1,4 +1,5 @@
 import kakao.Compact;
+import kakao.P92335;
 import kakao.Report;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -74,6 +75,12 @@ public class ProgrammersTest {
     @DisplayName("[2020 KAKAO BLIND] 문자열 압축")
     void compact() {
         assertThat(new Compact().solution2("ababccc")).isEqualTo(7);
+    }
+
+    @Test
+    @DisplayName("[2022 KAKAO BLIND] k진수에서 소수 개수 구하기")
+    void p92335() {
+        assertThat(new P92335().solution2(437674, 3)).isEqualTo(3);
     }
 
 }
