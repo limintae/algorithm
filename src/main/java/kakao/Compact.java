@@ -5,7 +5,6 @@ public class Compact {
     public int solution(String s) {
         int min = s.length();
         for (int compactLength = 1; compactLength <= s.length() / 2; compactLength++) {
-            compactLength = 2;
             StringBuilder compactResultString = new StringBuilder();
             String current = "";
             String next = "";

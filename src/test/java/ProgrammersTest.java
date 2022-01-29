@@ -1,5 +1,6 @@
 import kakao.Compact;
 import kakao.P92335;
+import kakao.P92335TMP;
 import kakao.Report;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -40,8 +41,10 @@ public class ProgrammersTest {
     @Test
     @DisplayName("[DFS/BFS] 가장 먼 노드")
     void farthestNode() {
-        int[][] edge = {{3, 6}, {4, 3}, {3, 2}, {1, 3}, {1, 2}, {2, 4}, {5, 2}};
-        assertThat(new FarthestNode().solution(6, edge)).isEqualTo(3);
+//        int[][] edge = {{3, 6}, {4, 3}, {3, 2}, {1, 3}, {1, 2}, {2, 4}, {5, 2}};
+//        assertThat(new FarthestNode().solution(6, edge)).isEqualTo(3);
+        int[][] edge = {{3, 6}, {4, 3}, {3, 2}, {1, 3}, {1, 2}, {2, 4}, {5, 2}, {6, 7}};
+        assertThat(new FarthestNode().solution(7, edge)).isEqualTo(1);
     }
 
     @Test
@@ -80,7 +83,9 @@ public class ProgrammersTest {
     @Test
     @DisplayName("[2022 KAKAO BLIND] k진수에서 소수 개수 구하기")
     void p92335() {
-        assertThat(new P92335().solution2(437674, 3)).isEqualTo(3);
+        assertThat(new P92335().solution(437674, 3)).isEqualTo(3);
+        assertThat(new P92335().solution(110011, 10)).isEqualTo(2);
+        assertThat(new P92335().solution(797161, 3)).isEqualTo(1);
     }
 
 }
