@@ -33,7 +33,7 @@ programmers/Runners.java
  programmers.Runners$Solution
 kakao/Compact.java
  kakao.Compact
-kakao/P92335TMP.java
- kakao.P92335TMP
 kakao/P92335.java
  kakao.P92335
+programmers/dfs/Network.java
+ programmers.dfs.Network

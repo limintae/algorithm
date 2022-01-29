@@ -1,11 +1,11 @@
 import kakao.Compact;
 import kakao.P92335;
-import kakao.P92335TMP;
 import kakao.Report;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import programmers.binary.Bridge;
 import programmers.binary.Immigration;
+import programmers.dfs.Network;
 import programmers.dfs.TargetNumber;
 import programmers.dfs.WordConvert;
 import programmers.graph.FarthestNode;
@@ -86,6 +86,13 @@ public class ProgrammersTest {
         assertThat(new P92335().solution(437674, 3)).isEqualTo(3);
         assertThat(new P92335().solution(110011, 10)).isEqualTo(2);
         assertThat(new P92335().solution(797161, 3)).isEqualTo(1);
+    }
+
+    @Test
+    @DisplayName("[DFS/BFS] 네트워크")
+    void network() {
+        assertThat(new Network().solution(3, new int[][] {{1,1,0},{1,1,0},{0,0,1}})).isEqualTo(2);
+//        assertThat(new Network().solution(3, new int[][] {{1,1,0},{1,1,1},{0,1,1}})).isEqualTo(1);
     }
 
 }
