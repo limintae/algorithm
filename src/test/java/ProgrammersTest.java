@@ -100,6 +100,16 @@ public class ProgrammersTest {
     @DisplayName("[2022 KAKAO BLIND] 양궁대회")
     void p92342() {
         assertThat(new P92342().solution(5, new int[] {2,1,1,1,0,0,0,0,0,0,0})).isEqualTo(new int[] {0,2,2,0,1,0,0,0,0,0,0});
+        assertThat(new P92342().solution(1, new int[] {1,0,0,0,0,0,0,0,0,0,0})).isEqualTo(new int[] {-1});
+        assertThat(new P92342().solution(9, new int[] {0,0,1,2,0,1,1,1,1,1,1})).isEqualTo(new int[] {1,1,2,0,1,2,2,0,0,0,0});
+        assertThat(new P92342().solution(10, new int[] {0,0,0,0,0,0,0,0,3,4,3})).isEqualTo(new int[] {1,1,1,1,1,1,1,1,0,0,2});
+
+    }
+
+    @Test
+    @DisplayName("[DP] N으로 표현")
+    void p42895() {
+
     }
 
 }

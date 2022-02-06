@@ -6,54 +6,53 @@ package kakao;
  */
 public class P92342 {
 
-    private int[] MaxRet;
-    private int MaxScore;
+    private int[] lionBestInfo;
+    private int maxScore;
+
     public int[] solution(int n, int[] info) {
-        MaxRet = new int[11];
-        MaxScore = 0;
-        helper(info, n, 0, 0, 0, new int[11]);
-        return MaxScore==0?new int[]{-1}:MaxRet;
+        lionBestInfo = new int[11];
+        maxScore = 0;
+        dfs(info, n, 0, 0, 0, new int[11]);
+        return maxScore == 0 ? new int[]{-1} : lionBestInfo;
     }
 
-    public void helper(int[] info, int n, int score, int opponent, int idx, int[] arr) {
-        if(idx==10) {
-            if(score-opponent>=MaxScore) {
-                arr[idx] = n;
-                if(MaxScore<(score-opponent)) {
-                    // set
-                    setArr(arr);
-                    MaxScore = score-opponent;
-
-                } else if(MaxScore==(score-opponent)) {
-                    // sort check -> set
-                    if(checkSort(arr)) setArr(arr);
+    public void dfs(int[] apeachInfo, int n, int lionScore, int apeachScore, int idx, int[] lionInfo) {
+        if (idx == 10) {
+            // 모든 화살을 사용하였을경우 판정
+            if (lionScore - apeachScore >= maxScore) {
+                lionInfo[idx] = n;
+                if (maxScore < (lionScore - apeachScore)) {
+                    lionBestInfo = lionInfo.clone();
+                    maxScore = lionScore - apeachScore;
+                } else if (maxScore == (lionScore - apeachScore)) {
+                    if (checkSort(lionInfo)) {
+                        // 가장 낮은점수를 리턴
+                        lionBestInfo = lionInfo.clone();
+                    }
                 }
             }
             return;
         }
-        // 이길떄
-        if(info[idx]<n) {
-            arr[idx] = info[idx]+1;
-            helper(info, n-(info[idx]+1), score+(10-idx), opponent, idx+1, arr);
+
+        if(apeachInfo[idx]<n) {
+            // 이길 수 있는 점수
+            int lionShootArrowCount = apeachInfo[idx]+1;
+            int lionRemainArrowCount = n-(lionShootArrowCount);
+            lionInfo[idx] = lionShootArrowCount;
+            dfs(apeachInfo, lionRemainArrowCount, lionScore+(10 - idx), apeachScore, idx+1, lionInfo);
         }
-        // 질때
-        arr[idx] = 0;
-        helper(info, n, score, opponent+(info[idx]>0?(10-idx):0), idx+1, arr);
-        return;
+
+        // 이길 수 없는 점수
+        lionInfo[idx] = 0;
+        int addApeachScore = (apeachInfo[idx] > 0?(10 - idx):0);
+        dfs(apeachInfo, n, lionScore, apeachScore + addApeachScore, idx+1, lionInfo);
     }
 
-    public void setArr(int[] arr) {
-        for(int i=0 ; i<=10 ; i++) {
-            MaxRet[i] = arr[i];
-        }
-        return;
-    }
-
-    public boolean checkSort(int[] arr) {
+    public boolean checkSort(int[] lionInfo) {
         for(int i=10 ; i>=0 ; i--) {
-            if(MaxRet[i]==arr[i]) {
+            if(lionBestInfo[i]==lionInfo[i]) {
                 continue;
-            } else if(MaxRet[i]<arr[i]) {
+            } else if(lionBestInfo[i]<lionInfo[i]) {
                 return true;
             } else {
                 break;
