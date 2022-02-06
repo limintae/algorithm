@@ -1,5 +1,6 @@
 import kakao.Compact;
 import kakao.P92335;
+import kakao.P92342;
 import kakao.Report;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -92,7 +93,13 @@ public class ProgrammersTest {
     @DisplayName("[DFS/BFS] 네트워크")
     void network() {
         assertThat(new Network().solution(3, new int[][] {{1,1,0},{1,1,0},{0,0,1}})).isEqualTo(2);
-//        assertThat(new Network().solution(3, new int[][] {{1,1,0},{1,1,1},{0,1,1}})).isEqualTo(1);
+        assertThat(new Network().solution(3, new int[][] {{1,1,0},{1,1,1},{0,1,1}})).isEqualTo(1);
+    }
+
+    @Test
+    @DisplayName("[2022 KAKAO BLIND] 양궁대회")
+    void p92342() {
+        assertThat(new P92342().solution(5, new int[] {2,1,1,1,0,0,0,0,0,0,0})).isEqualTo(new int[] {0,2,2,0,1,0,0,0,0,0,0});
     }
 
 }
