@@ -9,6 +9,7 @@ import programmers.binary.Immigration;
 import programmers.dfs.Network;
 import programmers.dfs.TargetNumber;
 import programmers.dfs.WordConvert;
+import programmers.dp.P42895;
 import programmers.graph.FarthestNode;
 import programmers.greedy.GymSuit;
 
@@ -109,7 +110,8 @@ public class ProgrammersTest {
     @Test
     @DisplayName("[DP] N으로 표현")
     void p42895() {
-
+        assertThat(new P42895().solution(5, 12)).isEqualTo(4);
+        assertThat(new P42895().solution(2, 11)).isEqualTo(3);
     }
 
 }
