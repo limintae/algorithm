@@ -27,14 +27,13 @@ public class P42895 {
             }
         }
 
-        int X=N;
-        for(int i=1;i<=8-count;i++) {
+        int X = N;
+        for(int i = 1; i <= 8-count; i++) {
             dfs(N,i+count,sum+X);
             dfs(N,i+count,sum-X);
             dfs(N,i+count,sum*X);
             dfs(N,i+count,sum/X);
-            // 사용된 5의
-            X = (10 * X) + N;
+            X = (10 * X) + N; // N의 수에따른 연산
         }
     }
 

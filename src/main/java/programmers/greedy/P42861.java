@@ -32,6 +32,7 @@ public class P42861 {
 
             // 연결되어있지 않다면 건설
             answer += cost;
+            // 최종적으로 parent가 모두 0이된다 (모두 연결되었다)
             parent[toParent] = fromParent;
         }
 

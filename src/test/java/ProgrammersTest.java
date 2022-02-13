@@ -10,6 +10,7 @@ import programmers.dfs.Network;
 import programmers.dfs.TargetNumber;
 import programmers.dfs.WordConvert;
 import programmers.dp.P42895;
+import programmers.etc.P77486;
 import programmers.graph.FarthestNode;
 import programmers.greedy.GymSuit;
 import programmers.greedy.P42861;
@@ -119,6 +120,17 @@ public class ProgrammersTest {
     @DisplayName("[Greedy] 섬 연결하기")
     void P42861() {
         assertThat(new P42861().solution(4, new int[][] {{0,1,1},{0,2,2},{1,2,5},{1,3,1},{2,3,8}})).isEqualTo(4);
+    }
+
+    @Test
+    @DisplayName("[2021 Dev-Matching: 웹 백엔드 개발] 다단계 칫솔 판매")
+    void P77486() {
+        assertThat(new P77486().solution(
+                new String[] {"john", "mary", "edward", "sam", "emily", "jaimie", "tod", "young"},
+                new String[] {"-", "-", "mary", "edward", "mary", "mary", "jaimie", "edward"},
+                new String[] {"young", "john", "tod", "emily", "mary"},
+                new int[] {12, 4, 2, 5, 10})
+        ).isEqualTo(new int[] {360, 958, 108, 0, 450, 18, 180, 1080});
     }
 
 }
