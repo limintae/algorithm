@@ -33,6 +33,7 @@ public class P42895 {
             dfs(N,i+count,sum-X);
             dfs(N,i+count,sum*X);
             dfs(N,i+count,sum/X);
+            // 사용된 5의
             X = (10 * X) + N;
         }
     }

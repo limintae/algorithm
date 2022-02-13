@@ -12,6 +12,7 @@ import programmers.dfs.WordConvert;
 import programmers.dp.P42895;
 import programmers.graph.FarthestNode;
 import programmers.greedy.GymSuit;
+import programmers.greedy.P42861;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -112,6 +113,12 @@ public class ProgrammersTest {
     void p42895() {
         assertThat(new P42895().solution(5, 12)).isEqualTo(4);
         assertThat(new P42895().solution(2, 11)).isEqualTo(3);
+    }
+
+    @Test
+    @DisplayName("[Greedy] 섬 연결하기")
+    void P42861() {
+        assertThat(new P42861().solution(4, new int[][] {{0,1,1},{0,2,2},{1,2,5},{1,3,1},{2,3,8}})).isEqualTo(4);
     }
 
 }
