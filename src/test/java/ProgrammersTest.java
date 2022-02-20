@@ -1,7 +1,4 @@
-import kakao.Compact;
-import kakao.P92335;
-import kakao.P92342;
-import kakao.Report;
+import kakao.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import programmers.binary.Bridge;
@@ -131,6 +128,35 @@ public class ProgrammersTest {
                 new String[] {"young", "john", "tod", "emily", "mary"},
                 new int[] {12, 4, 2, 5, 10})
         ).isEqualTo(new int[] {360, 958, 108, 0, 450, 18, 180, 1080});
+    }
+
+    @Test
+    @DisplayName("[2020 KAKAO BLIND] 자물쇠와 열쇠")
+    void P60059() {
+        assertThat(new P60059().solution(
+                new int[][] {
+                        {0,0,0},
+                        {1,0,0},
+                        {0,1,1}
+                        },
+                new int[][] {
+                        {1,1,1},
+                        {1,1,0},
+                        {1,0,1}
+                })
+        ).isTrue();
+        assertThat(new P60059().solution(
+                new int[][] {
+                        {0,0,0},
+                        {0,0,0},
+                        {0,1,1}
+                },
+                new int[][] {
+                        {1,0,1},
+                        {1,0,1},
+                        {1,0,1}
+                })
+        ).isFalse();
     }
 
 }
