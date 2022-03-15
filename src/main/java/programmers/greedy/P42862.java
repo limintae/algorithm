@@ -2,12 +2,11 @@ package programmers.greedy;
 
 import java.util.*;
 
-public class GymSuit {
-
-//    public static void main(String[] args) {
-//        System.out.println(solution(5, new int[] {2,4},new int[] {1,3,5}));
-////        System.out.println(solution(5, new int[] {2,4},new int[] {3}));
-//    }
+/**
+ * 체육복
+ * https://programmers.co.kr/learn/courses/30/lessons/42862
+ */
+public class P42862 {
 
     public static int solution(int n, int[] lost, int[] reserve) {
         Arrays.sort(lost);

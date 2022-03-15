@@ -9,22 +9,12 @@ import programmers.dfs.WordConvert;
 import programmers.dp.P42895;
 import programmers.etc.P77486;
 import programmers.graph.FarthestNode;
-import programmers.greedy.GymSuit;
+import programmers.greedy.P42862;
 import programmers.greedy.P42861;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ProgrammersTest {
-
-    @Test
-    @DisplayName("[Greedy] 체육복")
-    void gymSuitTest() {
-        assertThat(GymSuit.solution(5, new int[] {2,4},new int[] {1,3,5})).isEqualTo(5);
-        assertThat(GymSuit.solution(5, new int[] {2,4},new int[] {3})).isEqualTo(4);
-        assertThat(GymSuit.solution(3, new int[] {3},new int[] {1})).isEqualTo(2);
-        assertThat(GymSuit.solution(4, new int[] {4,2},new int[] {3,5})).isEqualTo(4);
-        assertThat(GymSuit.solution(3, new int[] {1,2},new int[] {2,3})).isEqualTo(2);
-    }
 
     @Test
     @DisplayName("[DFS/BFS] 단어 변환")
@@ -111,12 +101,6 @@ public class ProgrammersTest {
     void p42895() {
         assertThat(new P42895().solution(5, 12)).isEqualTo(4);
         assertThat(new P42895().solution(2, 11)).isEqualTo(3);
-    }
-
-    @Test
-    @DisplayName("[Greedy] 섬 연결하기")
-    void P42861() {
-        assertThat(new P42861().solution(4, new int[][] {{0,1,1},{0,2,2},{1,2,5},{1,3,1},{2,3,8}})).isEqualTo(4);
     }
 
     @Test
