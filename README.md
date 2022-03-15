@@ -1,3 +1,3 @@
-### README.md
+# 알고리즘 스터디
 
-- 알고리즘 관련 프로젝트!!
+https://programmers.co.kr 코딩테스트 풀이
