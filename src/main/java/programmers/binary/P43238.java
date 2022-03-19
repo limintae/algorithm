@@ -22,6 +22,7 @@ public class P43238 {
         end = max;
         answer = max;
 
+        // 이분 탐색 시작
         while (start < end) {
 
             long t = 0;
