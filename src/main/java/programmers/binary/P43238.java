@@ -1,6 +1,10 @@
 package programmers.binary;
 
-public class Immigration {
+/**
+ * 입국심사
+ * https://programmers.co.kr/learn/courses/30/lessons/43238
+ */
+public class P43238 {
 
     public long solution(int n, int[] times) {
         long answer = 0;

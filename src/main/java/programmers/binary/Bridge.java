@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class Bridge {
 
-    // https://gom20.tistory.com/204 참고!
     public int solution(int distance, int[] rocks, int n) {
         int answer = 0;
         Arrays.sort(rocks);

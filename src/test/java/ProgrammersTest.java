@@ -2,15 +2,13 @@ import kakao.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import programmers.binary.Bridge;
-import programmers.binary.Immigration;
+import programmers.binary.P43238;
 import programmers.dfs.Network;
 import programmers.dfs.TargetNumber;
 import programmers.dfs.WordConvert;
 import programmers.dp.P42895;
 import programmers.etc.P77486;
 import programmers.graph.FarthestNode;
-import programmers.greedy.P42862;
-import programmers.greedy.P42861;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -32,16 +30,8 @@ public class ProgrammersTest {
     @Test
     @DisplayName("[DFS/BFS] 가장 먼 노드")
     void farthestNode() {
-//        int[][] edge = {{3, 6}, {4, 3}, {3, 2}, {1, 3}, {1, 2}, {2, 4}, {5, 2}};
-//        assertThat(new FarthestNode().solution(6, edge)).isEqualTo(3);
         int[][] edge = {{3, 6}, {4, 3}, {3, 2}, {1, 3}, {1, 2}, {2, 4}, {5, 2}, {6, 7}};
         assertThat(new FarthestNode().solution(7, edge)).isEqualTo(1);
-    }
-
-    @Test
-    @DisplayName("[이분탐색] 입국심사")
-    void immigration() {
-        assertThat(new Immigration().solution(6, new int[]{7, 10})).isEqualTo(28);
     }
 
     @Test
