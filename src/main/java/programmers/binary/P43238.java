@@ -18,6 +18,7 @@ public class P43238 {
             }
         }
 
+        // 모든사람이 최대로 걸릴수 있는 시간
         max *= n;
         end = max;
         answer = max;
@@ -25,19 +26,18 @@ public class P43238 {
         // 이분 탐색 시작
         while (start < end) {
 
-            long t = 0;
+            long numberOfImmigration = 0;
             long mid = (long) Math.floor((start + end) / 2);
 
             for (int i = 0; i < times.length; i++) {
-                t += Math.floor(mid / times[i]);
+                numberOfImmigration += Math.floor(mid / times[i]);
             }
 
-            if (t < n) {
+            if (numberOfImmigration < n) {
                 start = mid + 1;
             } else {
                 end = mid;
             }
-
         }
         answer = end;
         return answer;
