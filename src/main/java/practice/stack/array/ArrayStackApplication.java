@@ -1,4 +1,4 @@
-package practice.stack;
+package practice.stack.array;
 
 public class ArrayStackApplication {
 
