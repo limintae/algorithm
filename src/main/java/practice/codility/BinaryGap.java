@@ -1,4 +1,4 @@
-package practice.codlilty;
+package practice.codility;
 
 public class BinaryGap {
 
@@ -8,7 +8,6 @@ public class BinaryGap {
     }
 
     public static int solution(int N) {
-        // write your code in Java SE 11
         String binary = Integer.toBinaryString(N);
         String[] arrBinary = binary.split("");
 
