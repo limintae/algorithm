@@ -1,6 +1,6 @@
 package practice.codility;
 
-public class CircleArray {
+public class CyclicRotation {
 
     public static void main(String[] args) {
         int[] answer = solution(new int[] {3, 8, 9, 7, 6}, 3);
